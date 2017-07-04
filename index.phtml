@@ -1,0 +1,10 @@
+<?php
+require './autoloader.php';
+require 'conf/config.inc';
+require 'func/helpers.php';
+
+
+$methodName = routeController::setRoute( __APP_URI__ );
+$params = routeController::get(__APP_URI__);
+$page = new indexController;
+$page->{$methodName}( $params );

@@ -1,0 +1,12 @@
+<h1>Zakupy</h1>
+<section name="produkty">
+    <?php foreach($vars as $one): ?>
+        <h5><?=$one->_id; ?></h5>
+        <h5>Pytanie :<?=$one->_nazwa; ?></h5>
+        <a href="dodaj/<?=$one->_id;?>"><button name="dodaj" value="dodaj">Dodaj do koszyka</button></a><hr>
+        
+    <?php endforeach;?>
+    
+    
+    
+</section>
